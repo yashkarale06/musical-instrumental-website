@@ -95,3 +95,4 @@ D:\freelance\MusicalInstrumentShop\obj\Debug\net9.0\MusicalInstrumentShop.genrun
 D:\freelance\MusicalInstrumentShop\obj\Debug\net9.0\ref\MusicalInstrumentShop.dll
 D:\freelance\MusicalInstrumentShop\obj\Debug\net9.0\compressed\ili0ypm5h3-014spylk8j.gz
 D:\freelance\MusicalInstrumentShop\obj\Debug\net9.0\compressed\g3jp0v8zpx-w05p37ozcj.gz
+D:\freelance\MusicalInstrumentShop\obj\Debug\net9.0\MusicalInstrumentShop.sourcelink.json
