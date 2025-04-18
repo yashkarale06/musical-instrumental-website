@@ -1,0 +1,80 @@
+@{
+    ViewData["Title"] = "Login";
+}
+
+<div class="account-page">
+    <h2>Login to Your Account</h2>
+    
+    <div class="account-form">
+        <form method="post">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            
+            <div class="form-group remember-me">
+                <input type="checkbox" id="remember" name="remember">
+                <label for="remember">Remember me</label>
+            </div>
+            
+            <div class="form-actions">
+                <button type="submit" class="btn">Login</button>
+                <a href="#" class="forgot-password">Forgot Password?</a>
+            </div>
+        </form>
+    </div>
+    
+    <div class="account-options">
+        <p>Don't have an account? <a asp-controller="Account" asp-action="Register">Register</a></p>
+    </div>
+</div>
+
+<style>
+    .account-page {
+        max-width: 500px;
+        margin: 0 auto;
+        padding: 2rem;
+    }
+    
+    .account-page h2 {
+        margin-bottom: 1.5rem;
+        text-align: center;
+    }
+    
+    .account-form {
+        background-color: #f4f4f4;
+        padding: 1.5rem;
+        border-radius: 4px;
+        margin-bottom: 1.5rem;
+    }
+    
+    .remember-me {
+        display: flex;
+        align-items: center;
+    }
+    
+    .remember-me input {
+        width: auto;
+        margin-right: 0.5rem;
+    }
+    
+    .remember-me label {
+        display: inline;
+        margin: 0;
+    }
+    
+    .form-actions {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .account-options {
+        text-align: center;
+    }
+</style>

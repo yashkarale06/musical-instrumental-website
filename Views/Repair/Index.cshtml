@@ -1,0 +1,257 @@
+@{
+    ViewData["Title"] = "Instrument Repair Services";
+}
+
+<div class="repair-page">
+    <section class="repair-header">
+        <h2>Instrument Repair Services</h2>
+        <p>Our expert technicians provide professional repair and maintenance services for all types of musical instruments.</p>
+    </section>
+    
+    <section class="repair-services">
+        <h3>Our Services</h3>
+        
+        <div class="service-grid">
+            <div class="service-card">
+                <h4>Guitar Repair</h4>
+                <ul>
+                    <li>String replacement</li>
+                    <li>Neck adjustment</li>
+                    <li>Fret leveling and dressing</li>
+                    <li>Pickup replacement</li>
+                    <li>Bridge and nut adjustment</li>
+                    <li>Complete setup</li>
+                </ul>
+                <p class="service-price">Starting at $49.99</p>
+            </div>
+            
+            <div class="service-card">
+                <h4>Piano Tuning</h4>
+                <ul>
+                    <li>Standard tuning</li>
+                    <li>Pitch raising</li>
+                    <li>Key regulation</li>
+                    <li>Hammer adjustment</li>
+                    <li>Voicing</li>
+                </ul>
+                <p class="service-price">Starting at $129.99</p>
+            </div>
+            
+            <div class="service-card">
+                <h4>Wind Instrument Repair</h4>
+                <ul>
+                    <li>Pad replacement</li>
+                    <li>Cork replacement</li>
+                    <li>Dent removal</li>
+                    <li>Key adjustment</li>
+                    <li>Full cleaning</li>
+                </ul>
+                <p class="service-price">Starting at $79.99</p>
+            </div>
+            
+            <div class="service-card">
+                <h4>Drum Repair</h4>
+                <ul>
+                    <li>Head replacement</li>
+                    <li>Bearing edge repair</li>
+                    <li>Hardware replacement</li>
+                    <li>Shell repair</li>
+                    <li>Cymbal repair</li>
+                </ul>
+                <p class="service-price">Starting at $59.99</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="repair-process">
+        <h3>Our Repair Process</h3>
+        
+        <div class="process-steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <h4>Evaluation</h4>
+                <p>Bring in your instrument for a free evaluation by our expert technicians.</p>
+            </div>
+            
+            <div class="step">
+                <div class="step-number">2</div>
+                <h4>Estimate</h4>
+                <p>Receive a detailed estimate of the repair costs and timeframe.</p>
+            </div>
+            
+            <div class="step">
+                <div class="step-number">3</div>
+                <h4>Repair</h4>
+                <p>Our skilled technicians perform the necessary repairs with care and precision.</p>
+            </div>
+            
+            <div class="step">
+                <div class="step-number">4</div>
+                <h4>Quality Check</h4>
+                <p>Each instrument undergoes a final quality check before return.</p>
+            </div>
+            
+            <div class="step">
+                <div class="step-number">5</div>
+                <h4>Pickup</h4>
+                <p>Pick up your instrument and enjoy the improved performance.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="repair-request">
+        <h3>Request a Repair Service</h3>
+        
+        <div class="request-form">
+            <form asp-controller="Repair" asp-action="RequestService" method="post">
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+                
+                <div class="form-group">
+                    <label for="instrumentType">Instrument Type</label>
+                    <select id="instrumentType" name="instrumentType" required>
+                        <option value="">Select Instrument Type</option>
+                        <option value="guitar">Guitar</option>
+                        <option value="piano">Piano / Keyboard</option>
+                        <option value="wind">Wind Instrument</option>
+                        <option value="drums">Drums / Percussion</option>
+                        <option value="strings">String Instrument</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="model">Instrument Make/Model</label>
+                    <input type="text" id="model" name="model">
+                </div>
+                
+                <div class="form-group">
+                    <label for="description">Describe the Issue</label>
+                    <textarea id="description" name="description" rows="5" required></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <button type="submit" class="btn">Submit Request</button>
+                </div>
+            </form>
+        </div>
+    </section>
+</div>
+
+<style>
+    .repair-page {
+        margin-bottom: 2rem;
+    }
+    
+    .repair-header {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    
+    .repair-header h2 {
+        margin-bottom: 1rem;
+    }
+    
+    .service-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+    }
+    
+    .service-card {
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        padding: 1.5rem;
+        background-color: #f9f9f9;
+    }
+    
+    .service-card h4 {
+        margin-bottom: 1rem;
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 0.5rem;
+    }
+    
+    .service-card ul {
+        margin-bottom: 1rem;
+        padding-left: 1.5rem;
+    }
+    
+    .service-card li {
+        margin-bottom: 0.5rem;
+    }
+    
+    .service-price {
+        font-weight: bold;
+        color: #28a745;
+    }
+    
+    .repair-process {
+        margin-bottom: 2rem;
+    }
+    
+    .repair-process h3 {
+        margin-bottom: 1.5rem;
+    }
+    
+    .process-steps {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+    
+    .step {
+        flex: 1;
+        min-width: 150px;
+        text-align: center;
+        padding: 1rem;
+    }
+    
+    .step-number {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: #333;
+        color: white;
+        font-weight: bold;
+        margin-bottom: 1rem;
+    }
+    
+    .repair-request {
+        background-color: #f4f4f4;
+        padding: 2rem;
+        border-radius: 4px;
+    }
+    
+    .repair-request h3 {
+        margin-bottom: 1.5rem;
+        text-align: center;
+    }
+    
+    .request-form {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    
+    @@media (max-width: 768px) {
+        .process-steps {
+            flex-direction: column;
+        }
+    }
+</style>

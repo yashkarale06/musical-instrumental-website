@@ -1,0 +1,195 @@
+@model MusicalInstrumentShop.Models.Product
+
+@{
+    ViewData["Title"] = Model.Name;
+}
+
+<div class="product-details">
+    <div class="product-header">
+        <h2>@Model.Name</h2>
+        <div class="product-rating">
+            <span class="stars">★★★★☆</span>
+            <span class="reviews">(24 reviews)</span>
+        </div>
+    </div>
+    
+    <div class="product-content">
+        <div class="product-image">
+            <img src="@Model.ImageUrl" alt="@Model.Name">
+        </div>
+        
+        <div class="product-info">
+            <p class="product-description">@Model.Description</p>
+            
+            <div class="product-details-list">
+                <div class="detail-item">
+                    <span class="detail-label">Brand:</span>
+                    <span class="detail-value">@Model.Brand</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">Model:</span>
+                    <span class="detail-value">@Model.Model</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">Availability:</span>
+                    <span class="detail-value">
+                        @if (Model.StockQuantity > 0)
+                        {
+                            <span class="in-stock">In Stock (@Model.StockQuantity available)</span>
+                        }
+                        else
+                        {
+                            <span class="out-of-stock">Out of Stock</span>
+                        }
+                    </span>
+                </div>
+            </div>
+            
+            <div class="product-price">
+                <span class="price">₹@Model.Price.ToString("N0")</span>
+            </div>
+            
+            <div class="product-actions">
+                <div class="quantity-selector">
+                    <label for="quantity">Quantity:</label>
+                    <select id="quantity">
+                        @for (int i = 1; i <= Math.Min(Model.StockQuantity, 5); i++)
+                        {
+                            <option value="@i">@i</option>
+                        }
+                    </select>
+                </div>
+                
+                <button class="add-to-cart" data-id="@Model.ProductId">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="product-tabs">
+        <ul class="tabs">
+            <li class="active"><a href="#description">Description</a></li>
+            <li><a href="#specifications">Specifications</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+        </ul>
+        
+        <div class="tab-content">
+            <div id="description" class="tab-pane active">
+                <h3>Product Description</h3>
+                <p>@Model.Description</p>
+                <p>Experience premium quality and exceptional sound with this @Model.Brand @Model.Name. Crafted with attention to detail, this instrument delivers professional performance for musicians of all levels.</p>
+            </div>
+            
+            <div id="specifications" class="tab-pane">
+                <h3>Product Specifications</h3>
+                <table class="specs-table">
+                    <tr>
+                        <td>Brand</td>
+                        <td>@Model.Brand</td>
+                    </tr>
+                    <tr>
+                        <td>Model</td>
+                        <td>@Model.Model</td>
+                    </tr>
+                    <tr>
+                        <td>Product Type</td>
+                        <td>@(Model.CategoryId == 1 ? "Guitar" : 
+                              Model.CategoryId == 2 ? "Keyboard" : 
+                              Model.CategoryId == 3 ? "Drum/Percussion" : 
+                              Model.CategoryId == 4 ? "Wind Instrument" : "Instrument")</td>
+                    </tr>
+                    <tr>
+                        <td>Color</td>
+                        <td>Black/Natural</td>
+                    </tr>
+                    <tr>
+                        <td>Material</td>
+                        <td>Premium Grade</td>
+                    </tr>
+                    <tr>
+                        <td>Warranty</td>
+                        <td>1 Year Manufacturer Warranty</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <div id="reviews" class="tab-pane">
+                <h3>Customer Reviews</h3>
+                <div class="review">
+                    <div class="review-header">
+                        <span class="review-author">Rahul Sharma</span>
+                        <span class="review-date">March 15, 2025</span>
+                        <span class="review-rating">★★★★★</span>
+                    </div>
+                    <p class="review-text">Great product! Exactly as described and arrived quickly. Sound quality is excellent.</p>
+                </div>
+                
+                <div class="review">
+                    <div class="review-header">
+                        <span class="review-author">Priya Patel</span>
+                        <span class="review-date">February 22, 2025</span>
+                        <span class="review-rating">★★★★☆</span>
+                    </div>
+                    <p class="review-text">Very good quality for the price. Would recommend to beginners and intermediate players!</p>
+                </div>
+                
+                <div class="write-review">
+                    <h4>Write a Review</h4>
+                    <form>
+                        <div class="form-group">
+                            <label for="review-rating">Rating</label>
+                            <select id="review-rating">
+                                <option value="5">5 Stars</option>
+                                <option value="4">4 Stars</option>
+                                <option value="3">3 Stars</option>
+                                <option value="2">2 Stars</option>
+                                <option value="1">1 Star</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="review-title">Review Title</label>
+                            <input type="text" id="review-title" placeholder="Summarize your experience">
+                        </div>
+                        <div class="form-group">
+                            <label for="review-comment">Review</label>
+                            <textarea id="review-comment" placeholder="Tell us what you liked or didn't like"></textarea>
+                        </div>
+                        <button type="submit" class="btn">Submit Review</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Tab switching functionality
+            const tabs = document.querySelectorAll('.tabs li a');
+            tabs.forEach(tab => {
+                tab.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Remove active class from all tabs and panes
+                    document.querySelectorAll('.tabs li').forEach(li => li.classList.remove('active'));
+                    document.querySelectorAll('.tab-pane').forEach(pane => pane.classList.remove('active'));
+                    
+                    // Add active class to current tab
+                    this.parentElement.classList.add('active');
+                    
+                    // Show the selected tab content
+                    const tabId = this.getAttribute('href');
+                    document.querySelector(tabId).classList.add('active');
+                });
+            });
+            
+            // Add to cart functionality
+            document.querySelector('.add-to-cart').addEventListener('click', function() {
+                const productId = this.getAttribute('data-id');
+                const quantity = document.getElementById('quantity').value;
+                // In a real app, this would call an API to add the item to the cart
+                alert(`Added ${quantity} of product ${productId} to cart!`);
+            });
+        });
+    </script>
+}
