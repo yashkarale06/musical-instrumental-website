@@ -192,17 +192,17 @@
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"s3niagee53"},{"Name":"integrity","Value":"sha256-eC/DobN2u5Z3UcLQ42a/xgPyLUyr8C/YVtfQi3WNBPc="},{"Name":"label","Value":"_content/MusicalInstrumentShop/images/products/trumpet.jpg"}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"174684"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022eC/DobN2u5Z3UcLQ42a/xgPyLUyr8C/YVtfQi3WNBPc=\u0022"},{"Name":"Last-Modified","Value":"Fri, 18 Apr 2025 21:07:49 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/MusicalInstrumentShop/js/site.014spylk8j.js">
+    <StaticWebAssetEndpoint Include="_content/MusicalInstrumentShop/js/site.2nn316vuvx.js">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\site.js'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"014spylk8j"},{"Name":"integrity","Value":"sha256-ZNQLapcm/TtdbvdczSpst5SF4IovkbrPhn/Wr9GN3g0="},{"Name":"label","Value":"_content/MusicalInstrumentShop/js/site.js"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"2776"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022ZNQLapcm/TtdbvdczSpst5SF4IovkbrPhn/Wr9GN3g0=\u0022"},{"Name":"Last-Modified","Value":"Fri, 18 Apr 2025 20:38:56 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"2nn316vuvx"},{"Name":"integrity","Value":"sha256-boPdjguU2j4VBi\u002B9M45gq0aE5ogPuUt3fpucxohgrIc="},{"Name":"label","Value":"_content/MusicalInstrumentShop/js/site.js"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"8956"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022boPdjguU2j4VBi\u002B9M45gq0aE5ogPuUt3fpucxohgrIc=\u0022"},{"Name":"Last-Modified","Value":"Sat, 19 Apr 2025 20:03:58 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/MusicalInstrumentShop/js/site.js">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\site.js'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-ZNQLapcm/TtdbvdczSpst5SF4IovkbrPhn/Wr9GN3g0="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"2776"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022ZNQLapcm/TtdbvdczSpst5SF4IovkbrPhn/Wr9GN3g0=\u0022"},{"Name":"Last-Modified","Value":"Fri, 18 Apr 2025 20:38:56 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-boPdjguU2j4VBi\u002B9M45gq0aE5ogPuUt3fpucxohgrIc="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"8956"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022boPdjguU2j4VBi\u002B9M45gq0aE5ogPuUt3fpucxohgrIc=\u0022"},{"Name":"Last-Modified","Value":"Sat, 19 Apr 2025 20:03:58 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/MusicalInstrumentShop/lib/bootstrap/dist/css/bootstrap-grid.bqjiyaj88i.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\bootstrap\dist\css\bootstrap-grid.css'))</AssetFile>

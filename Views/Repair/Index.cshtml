@@ -99,55 +99,6 @@
         </div>
     </section>
     
-    <section class="repair-request">
-        <h3>Request a Repair Service</h3>
-        
-        <div class="request-form">
-            <form asp-controller="Repair" asp-action="RequestService" method="post">
-                <div class="form-group">
-                    <label for="name">Your Name</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="phone">Phone Number</label>
-                    <input type="tel" id="phone" name="phone">
-                </div>
-                
-                <div class="form-group">
-                    <label for="instrumentType">Instrument Type</label>
-                    <select id="instrumentType" name="instrumentType" required>
-                        <option value="">Select Instrument Type</option>
-                        <option value="guitar">Guitar</option>
-                        <option value="piano">Piano / Keyboard</option>
-                        <option value="wind">Wind Instrument</option>
-                        <option value="drums">Drums / Percussion</option>
-                        <option value="strings">String Instrument</option>
-                        <option value="other">Other</option>
-                    </select>
-                </div>
-                
-                <div class="form-group">
-                    <label for="model">Instrument Make/Model</label>
-                    <input type="text" id="model" name="model">
-                </div>
-                
-                <div class="form-group">
-                    <label for="description">Describe the Issue</label>
-                    <textarea id="description" name="description" rows="5" required></textarea>
-                </div>
-                
-                <div class="form-group">
-                    <button type="submit" class="btn">Submit Request</button>
-                </div>
-            </form>
-        </div>
-    </section>
 </div>
 
 <style>

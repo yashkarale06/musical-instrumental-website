@@ -93,7 +93,6 @@ D:\freelance\MusicalInstrumentShop\obj\Debug\net9.0\refint\MusicalInstrumentShop
 D:\freelance\MusicalInstrumentShop\obj\Debug\net9.0\MusicalInstrumentShop.pdb
 D:\freelance\MusicalInstrumentShop\obj\Debug\net9.0\MusicalInstrumentShop.genruntimeconfig.cache
 D:\freelance\MusicalInstrumentShop\obj\Debug\net9.0\ref\MusicalInstrumentShop.dll
-D:\freelance\MusicalInstrumentShop\obj\Debug\net9.0\compressed\ili0ypm5h3-014spylk8j.gz
 D:\freelance\MusicalInstrumentShop\obj\Debug\net9.0\MusicalInstrumentShop.sourcelink.json
 D:\freelance\MusicalInstrumentShop\obj\Debug\net9.0\MusicalInstrumentShop.csproj.AssemblyReference.cache
 D:\freelance\MusicalInstrumentShop\bin\Debug\net9.0\Humanizer.dll
@@ -226,3 +225,4 @@ D:\freelance\MusicalInstrumentShop\obj\Debug\net9.0\MusicalI.FF6FFA87.Up2Date
 D:\freelance\MusicalInstrumentShop\bin\Debug\net9.0\Newtonsoft.Json.dll
 D:\freelance\MusicalInstrumentShop\bin\Debug\net9.0\RazorPay Core.dll
 D:\freelance\MusicalInstrumentShop\obj\Debug\net9.0\compressed\g3jp0v8zpx-38q5rryap2.gz
+D:\freelance\MusicalInstrumentShop\obj\Debug\net9.0\compressed\ili0ypm5h3-2nn316vuvx.gz

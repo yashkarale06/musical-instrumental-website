@@ -1,0 +1,204 @@
+@model MusicalInstrumentShop.ViewModels.FeedbackViewModel
+@{
+    ViewData["Title"] = "Customer Feedback";
+}
+
+<div class="feedback-page">
+    <h2>Customer Feedback</h2>
+    
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <div class="alert alert-success">
+            @TempData["SuccessMessage"]
+        </div>
+    }
+    
+    <div class="feedback-container">
+        <div class="feedback-info">
+            <h3>We Value Your Feedback</h3>
+            <p>At Musical Instrument Shop, we're committed to providing the best experience for our customers. Your feedback helps us improve our products and services.</p>
+            
+            <div class="contact-info">
+                <h4>Contact Information</h4>
+                <p><strong>Address:</strong> 123 Music Street, Melody City</p>
+                <p><strong>Phone:</strong> (123) 456-7890</p>
+                <p><strong>Email:</strong> feedback@musicalinstrumentshop.com</p>
+                <p><strong>Business Hours:</strong> Monday - Saturday: 10:00 AM - 8:00 PM</p>
+            </div>
+        </div>
+        
+        <div class="feedback-form">
+            <h3>Send Us Your Feedback</h3>
+            <form asp-controller="Feedback" asp-action="SubmitFeedback" method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                
+                <div class="form-group">
+                    <label asp-for="Name"></label>
+                    <input asp-for="Name" class="form-control" />
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label asp-for="Email"></label>
+                    <input asp-for="Email" class="form-control" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label asp-for="Subject"></label>
+                    <input asp-for="Subject" class="form-control" />
+                    <span asp-validation-for="Subject" class="text-danger"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label asp-for="Message"></label>
+                    <textarea asp-for="Message" class="form-control" rows="5"></textarea>
+                    <span asp-validation-for="Message" class="text-danger"></span>
+                </div>
+                
+                <div class="form-group form-check">
+                    <input asp-for="SubscribeToNewsletter" class="form-check-input" />
+                    <label asp-for="SubscribeToNewsletter" class="form-check-label">Subscribe to our newsletter for updates and offers</label>
+                </div>
+                
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-submit">Submit Feedback</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<style>
+    .feedback-page {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 2rem 1rem;
+    }
+    
+    .feedback-page h2 {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    
+    .alert {
+        padding: 1rem;
+        margin-bottom: 1.5rem;
+        border-radius: 4px;
+    }
+    
+    .alert-success {
+        background-color: #d4edda;
+        color: #155724;
+        border: 1px solid #c3e6cb;
+    }
+    
+    .feedback-container {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 2rem;
+    }
+    
+    .feedback-info, .feedback-form {
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        padding: 1.5rem;
+    }
+    
+    .feedback-info h3, .feedback-form h3 {
+        margin-bottom: 1rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 1px solid #eee;
+    }
+    
+    .feedback-info p {
+        margin-bottom: 1rem;
+        line-height: 1.6;
+    }
+    
+    .contact-info {
+        margin-top: 2rem;
+    }
+    
+    .contact-info h4 {
+        margin-bottom: 1rem;
+    }
+    
+    .form-group {
+        margin-bottom: 1.5rem;
+    }
+    
+    .form-group label {
+        display: block;
+        margin-bottom: 0.5rem;
+        font-weight: bold;
+    }
+    
+    .form-control {
+        width: 100%;
+        padding: 0.75rem;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-size: 1rem;
+    }
+    
+    .form-control:focus {
+        border-color: #007bff;
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+    }
+    
+    .text-danger {
+        color: #dc3545;
+        font-size: 0.875rem;
+        margin-top: 0.25rem;
+        display: block;
+    }
+    
+    .form-check {
+        display: flex;
+        align-items: flex-start;
+    }
+    
+    .form-check-input {
+        margin-top: 0.3rem;
+        margin-right: 0.5rem;
+    }
+    
+    .form-check-label {
+        font-weight: normal;
+    }
+    
+    .form-actions {
+        margin-top: 2rem;
+        text-align: center;
+    }
+    
+    .btn-submit {
+        background-color: #007bff;
+        color: white;
+        padding: 0.75rem 2rem;
+        font-size: 1rem;
+        font-weight: bold;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    
+    .btn-submit:hover {
+        background-color: #0069d9;
+    }
+    
+    /* Responsive Adjustments */
+    @@media (max-width: 768px) {
+        .feedback-container {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
