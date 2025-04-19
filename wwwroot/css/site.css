@@ -895,3 +895,28 @@ footer {
       grid-template-columns: 1fr;
   }
 }
+
+/* Add these styles to your site.css file */
+
+.welcome-user {
+  color: white;
+  margin-right: 1rem;
+}
+
+.logout-form {
+  display: inline;
+}
+
+.btn-logout {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  text-decoration: underline;
+  padding: 0;
+  font: inherit;
+}
+
+.btn-logout:hover {
+  color: #ddd;
+}

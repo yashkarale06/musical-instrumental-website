@@ -1,0 +1,225 @@
+@{
+    ViewData["Title"] = "Order Confirmation";
+}
+
+<div class="confirmation-page">
+    <div class="confirmation-container">
+        <div class="confirmation-header">
+            <div class="check-mark">
+                <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+            </div>
+            <h2>Order Confirmed!</h2>
+            <p class="order-number">Order #12345</p>
+            <p class="thank-you">Thank you for your order!</p>
+        </div>
+        
+        <div class="confirmation-details">
+            <div class="details-section">
+                <h3>Order Summary</h3>
+                <div class="summary-items">
+                    <!-- This would be dynamically populated from the order in a real application -->
+                    <div class="summary-item">
+                        <div class="item-info">
+                            <span class="item-name">Acoustic Guitar</span>
+                            <span class="item-quantity">x1</span>
+                        </div>
+                        <span class="item-price">₹22,499</span>
+                    </div>
+                    <div class="summary-item">
+                        <div class="item-info">
+                            <span class="item-name">Digital Piano</span>
+                            <span class="item-quantity">x1</span>
+                        </div>
+                        <span class="item-price">₹41,249</span>
+                    </div>
+                </div>
+                
+                <div class="summary-total">
+                    <div class="total-row">
+                        <span>Subtotal:</span>
+                        <span>₹63,748</span>
+                    </div>
+                    <div class="total-row">
+                        <span>Shipping:</span>
+                        <span>₹500</span>
+                    </div>
+                    <div class="total-row">
+                        <span>Tax (18% GST):</span>
+                        <span>₹11,475</span>
+                    </div>
+                    <div class="total-row grand-total">
+                        <span>Total:</span>
+                        <span>₹75,723</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="details-row">
+                <div class="details-section">
+                    <h3>Shipping Information</h3>
+                    <p><strong>Name:</strong> @User.Identity.Name</p>
+                    <p><strong>Email:</strong> @User.Identity.Name</p>
+                    <p><strong>Address:</strong> 123 Music Street, Melody City, 400001</p>
+                </div>
+                
+                <div class="details-section">
+                    <h3>Payment Information</h3>
+                    <p><strong>Method:</strong> Cash on Delivery</p>
+                    <p><strong>Status:</strong> Pending</p>
+                </div>
+            </div>
+            
+            <div class="details-section">
+                <h3>Estimated Delivery</h3>
+                <p>Your order should arrive within 5-7 business days.</p>
+                <p>You will receive an email with tracking information once your order ships.</p>
+            </div>
+        </div>
+        
+        <div class="confirmation-actions">
+            <a href="@Url.Action("Index", "Home")" class="btn-continue-shopping">Continue Shopping</a>
+        </div>
+    </div>
+</div>
+
+<style>
+    .confirmation-page {
+        max-width: 800px;
+        margin: 2rem auto;
+        padding: 0 1rem;
+    }
+    
+    .confirmation-container {
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        padding: 2rem;
+    }
+    
+    .confirmation-header {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    
+    .check-mark {
+        color: #28a745;
+        margin-bottom: 1rem;
+    }
+    
+    .confirmation-header h2 {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+        color: #333;
+    }
+    
+    .order-number {
+        font-size: 1.2rem;
+        color: #6c757d;
+        margin-bottom: 0.5rem;
+    }
+    
+    .thank-you {
+        font-size: 1.1rem;
+        color: #333;
+    }
+    
+    .confirmation-details {
+        margin-bottom: 2rem;
+    }
+    
+    .details-section {
+        margin-bottom: 1.5rem;
+    }
+    
+    .details-section h3 {
+        margin-bottom: 1rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 1px solid #eee;
+    }
+    
+    .details-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+    }
+    
+    .summary-items {
+        margin-bottom: 1.5rem;
+    }
+    
+    .summary-item {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 1rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px dashed #eee;
+    }
+    
+    .item-info {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .item-name {
+        font-weight: bold;
+    }
+    
+    .item-quantity {
+        color: #6c757d;
+        font-size: 0.875rem;
+    }
+    
+    .item-price {
+        font-weight: bold;
+    }
+    
+    .summary-total {
+        margin-top: 1.5rem;
+    }
+    
+    .total-row {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 0.5rem;
+    }
+    
+    .grand-total {
+        font-weight: bold;
+        font-size: 1.2rem;
+        margin-top: 1rem;
+        padding-top: 1rem;
+        border-top: 2px solid #eee;
+    }
+    
+    .confirmation-actions {
+        text-align: center;
+    }
+    
+    .btn-continue-shopping {
+        display: inline-block;
+        background-color: #007bff;
+        color: white;
+        padding: 0.75rem 2rem;
+        font-size: 1rem;
+        font-weight: bold;
+        border: none;
+        border-radius: 4px;
+        text-decoration: none;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    
+    .btn-continue-shopping:hover {
+        background-color: #0069d9;
+    }
+    
+    /* Responsive Adjustments */
+    @@media (max-width: 768px) {
+        .details-row {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>

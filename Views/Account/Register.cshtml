@@ -1,0 +1,229 @@
+@model MusicalInstrumentShop.ViewModels.RegisterViewModel
+@{
+    ViewData["Title"] = "Register";
+}
+
+<div class="register-page">
+    <div class="register-container">
+        <h2>Create Your Account</h2>
+        <p class="subtitle">Join our community to access exclusive offers and track your orders.</p>
+        
+        <form method="post" asp-controller="Account" asp-action="Register" asp-route-returnUrl="@ViewData["ReturnUrl"]" class="register-form">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            
+            <div class="form-group">
+                <label asp-for="FirstName"></label>
+                <input asp-for="FirstName" class="form-control" />
+                <span asp-validation-for="FirstName" class="text-danger"></span>
+            </div>
+            
+            <div class="form-group">
+                <label asp-for="LastName"></label>
+                <input asp-for="LastName" class="form-control" />
+                <span asp-validation-for="LastName" class="text-danger"></span>
+            </div>
+            
+            <div class="form-group">
+                <label asp-for="Email"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+                <small class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+            
+            <div class="form-group">
+                <label asp-for="Password"></label>
+                <input asp-for="Password" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+                <small class="form-text text-muted">Password must be at least 8 characters long and include at least one uppercase letter, one lowercase letter, and one number.</small>
+            </div>
+            
+            <div class="form-group">
+                <label asp-for="ConfirmPassword"></label>
+                <input asp-for="ConfirmPassword" class="form-control" />
+                <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+            </div>
+            
+            <div class="form-group">
+                <label asp-for="PhoneNumber"></label>
+                <input asp-for="PhoneNumber" class="form-control" />
+                <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                <small class="form-text text-muted">Optional. For order notifications only.</small>
+            </div>
+            
+            <div class="form-group">
+                <label asp-for="Address"></label>
+                <textarea asp-for="Address" class="form-control" rows="3"></textarea>
+                <span asp-validation-for="Address" class="text-danger"></span>
+                <small class="form-text text-muted">Optional. You can also add this later.</small>
+            </div>
+            
+            <div class="form-group form-check">
+                <input asp-for="IsSubscribedToNewsletter" class="form-check-input" />
+                <label asp-for="IsSubscribedToNewsletter" class="form-check-label">Subscribe to our newsletter for the latest products and offers</label>
+            </div>
+            
+            <div class="form-group form-check">
+                <input type="checkbox" id="TermsAccepted" name="TermsAccepted" class="form-check-input" required />
+                <label for="TermsAccepted" class="form-check-label">I agree to the <a href="#">Terms and Conditions</a> and <a href="#">Privacy Policy</a></label>
+                <span id="terms-error" class="text-danger" style="display: none;">You must accept the terms and conditions.</span>
+            </div>
+            
+            <div class="form-actions">
+                <button type="submit" class="btn-register">Create Account</button>
+            </div>
+        </form>
+        
+        <div class="alternative-options">
+            <p>Already have an account? <a asp-controller="Account" asp-action="Login" asp-route-returnUrl="@ViewData["ReturnUrl"]">Login here</a></p>
+        </div>
+    </div>
+</div>
+
+<style>
+    .register-page {
+        max-width: 700px;
+        margin: 2rem auto;
+        padding: 0 1rem;
+    }
+    
+    .register-container {
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        padding: 2rem;
+    }
+    
+    .register-container h2 {
+        text-align: center;
+        margin-bottom: 0.5rem;
+        color: #333;
+    }
+    
+    .subtitle {
+        text-align: center;
+        color: #666;
+        margin-bottom: 2rem;
+    }
+    
+    .register-form {
+        margin-bottom: 1.5rem;
+    }
+    
+    .form-group {
+        margin-bottom: 1.5rem;
+    }
+    
+    .form-group label {
+        display: block;
+        margin-bottom: 0.5rem;
+        font-weight: bold;
+        color: #333;
+    }
+    
+    .form-control {
+        width: 100%;
+        padding: 0.75rem;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-size: 1rem;
+    }
+    
+    .form-control:focus {
+        border-color: #007bff;
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+    }
+    
+    .text-danger {
+        color: #dc3545;
+        font-size: 0.875rem;
+        margin-top: 0.25rem;
+        display: block;
+    }
+    
+    .form-text {
+        display: block;
+        margin-top: 0.25rem;
+        font-size: 0.875rem;
+    }
+    
+    .text-muted {
+        color: #6c757d;
+    }
+    
+    .form-check {
+        display: flex;
+        align-items: flex-start;
+    }
+    
+    .form-check-input {
+        margin-top: 0.3rem;
+        margin-right: 0.5rem;
+    }
+    
+    .form-check-label {
+        font-weight: normal;
+    }
+    
+    .form-actions {
+        margin-top: 2rem;
+        text-align: center;
+    }
+    
+    .btn-register {
+        display: inline-block;
+        background-color: #007bff;
+        color: white;
+        padding: 0.75rem 2rem;
+        font-size: 1rem;
+        font-weight: bold;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    
+    .btn-register:hover {
+        background-color: #0069d9;
+    }
+    
+    .alternative-options {
+        text-align: center;
+        padding-top: 1rem;
+        border-top: 1px solid #eee;
+    }
+    
+    .alternative-options a {
+        color: #007bff;
+        text-decoration: none;
+    }
+    
+    .alternative-options a:hover {
+        text-decoration: underline;
+    }
+    
+    /* Responsive Adjustments */
+    @@media (max-width: 768px) {
+        .register-container {
+            padding: 1.5rem;
+        }
+    }
+</style>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+    <script>
+        // Custom validation for terms and conditions
+        document.querySelector('form').addEventListener('submit', function(e) {
+            var termsCheckbox = document.getElementById('TermsAccepted');
+            var termsError = document.getElementById('terms-error');
+            
+            if (!termsCheckbox.checked) {
+                e.preventDefault();
+                termsError.style.display = 'block';
+            } else {
+                termsError.style.display = 'none';
+            }
+        });
+    </script>
+}

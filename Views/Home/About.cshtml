@@ -1,0 +1,193 @@
+@{
+    ViewData["Title"] = "About Us";
+}
+
+<div class="about-page">
+    <section class="about-header">
+        <h2>About Us</h2>
+        <p class="lead">We are passionate about music and dedicated to providing the finest instruments to musicians of all levels.</p>
+    </section>
+
+    <section class="about-story">
+        <div class="story-content">
+            <h3>Our Story</h3>
+            <p>Founded in 2010, Musical Instrument Shop began as a small store with a big dream - to create a space where musicians could find high-quality instruments, expert advice, and a community of fellow music lovers.</p>
+            <p>What started as a modest shop with just a handful of guitars and keyboards has grown into a comprehensive musical instrument destination offering everything from beginner-friendly starter kits to professional-grade equipment.</p>
+            <p>Our journey has been guided by our love for music and our commitment to helping others discover the joy of playing an instrument. We believe that music enriches lives, and we're proud to be a part of each customer's musical journey.</p>
+        </div>
+        <div class="story-image">
+            <img src="https://via.placeholder.com/600x400?text=Our+Store" alt="Our Store">
+        </div>
+    </section>
+
+    <section class="mission-values">
+        <h3>Our Mission & Values</h3>
+        <div class="values-grid">
+            <div class="value-card">
+                <h4>Quality</h4>
+                <p>We carefully select each instrument in our inventory to ensure exceptional quality and craftsmanship. Every product undergoes thorough inspection before reaching our shelves.</p>
+            </div>
+            <div class="value-card">
+                <h4>Expertise</h4>
+                <p>Our team consists of experienced musicians who understand the nuances of different instruments and can provide knowledgeable guidance to help you find the perfect match.</p>
+            </div>
+            <div class="value-card">
+                <h4>Customer Service</h4>
+                <p>We believe in building lasting relationships with our customers through honest advice, personalized service, and ongoing support throughout your musical journey.</p>
+            </div>
+            <div class="value-card">
+                <h4>Community</h4>
+                <p>Beyond selling instruments, we're committed to fostering a vibrant musical community through workshops, events, and collaborations with local music schools and artists.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="visit-us">
+        <h3>Visit Our Store</h3>
+        <div class="location-details">
+            <div class="location-info">
+                <p><strong>Address:</strong> 123 Music Street, Melody City, India</p>
+                <p><strong>Hours:</strong> Monday - Saturday: 10:00 AM - 8:00 PM | Sunday: 11:00 AM - 6:00 PM</p>
+                <p><strong>Phone:</strong> (123) 456-7890</p>
+                <p><strong>Email:</strong> info@musicalinstrumentshop.com</p>
+            </div>
+            <div class="location-map">
+                <!-- In a real app, this would be a Google Map or similar -->
+                <div class="map-placeholder">
+                    <img src="https://via.placeholder.com/600x300?text=Store+Location+Map" alt="Store Map">
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<style>
+    .about-page {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1rem;
+    }
+
+    .about-header {
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+
+    .about-header h2 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .lead {
+        font-size: 1.2rem;
+        color: #666;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .about-story {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        margin-bottom: 3rem;
+        align-items: center;
+    }
+
+    .story-content h3 {
+        margin-bottom: 1rem;
+        font-size: 1.8rem;
+        color: #333;
+    }
+
+    .story-content p {
+        margin-bottom: 1rem;
+        line-height: 1.6;
+    }
+
+    .story-image img {
+        width: 100%;
+        border-radius: 8px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .mission-values {
+        margin-bottom: 3rem;
+    }
+
+    .mission-values h3 {
+        text-align: center;
+        margin-bottom: 2rem;
+        font-size: 1.8rem;
+        color: #333;
+    }
+
+    .values-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 1.5rem;
+    }
+
+    .value-card {
+        background-color: #f8f9fa;
+        padding: 1.5rem;
+        border-radius: 8px;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .value-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+    }
+
+    .value-card h4 {
+        margin-bottom: 1rem;
+        color: #007bff;
+        font-size: 1.3rem;
+    }
+
+    .value-card p {
+        color: #666;
+        line-height: 1.6;
+    }
+
+    .visit-us {
+        margin-bottom: 3rem;
+    }
+
+    .visit-us h3 {
+        text-align: center;
+        margin-bottom: 2rem;
+        font-size: 1.8rem;
+        color: #333;
+    }
+
+    .location-details {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        align-items: center;
+    }
+
+    .location-info p {
+        margin-bottom: 1rem;
+        line-height: 1.6;
+    }
+
+    .map-placeholder img {
+        width: 100%;
+        border-radius: 8px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    @@media (max-width: 768px) {
+        .about-story, .location-details {
+            grid-template-columns: 1fr;
+        }
+
+        .member-image {
+            width: 150px;
+            height: 150px;
+        }
+    }
+</style>

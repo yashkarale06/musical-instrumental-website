@@ -1,0 +1,87 @@
+@{
+    ViewData["Title"] = "Access Denied";
+}
+
+<div class="access-denied-page">
+    <div class="access-denied-container">
+        <div class="access-denied-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="8" x2="12" y2="12"></line>
+                <line x1="12" y1="16" x2="12.01" y2="16"></line>
+            </svg>
+        </div>
+        <h2>Access Denied</h2>
+        <p>Sorry, you do not have permission to access this resource.</p>
+        <p>Please log in with an account that has the necessary permissions.</p>
+        <div class="access-denied-actions">
+            <a asp-controller="Home" asp-action="Index" class="btn-home">Go to Homepage</a>
+            <a asp-controller="Account" asp-action="Login" class="btn-login">Login</a>
+        </div>
+    </div>
+</div>
+
+<style>
+    .access-denied-page {
+        max-width: 600px;
+        margin: 3rem auto;
+        padding: 0 1rem;
+    }
+    
+    .access-denied-container {
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        padding: 2rem;
+        text-align: center;
+    }
+    
+    .access-denied-icon {
+        color: #dc3545;
+        margin-bottom: 1.5rem;
+    }
+    
+    .access-denied-container h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        color: #333;
+    }
+    
+    .access-denied-container p {
+        margin-bottom: 1rem;
+        color: #666;
+    }
+    
+    .access-denied-actions {
+        margin-top: 2rem;
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+    }
+    
+    .btn-home, .btn-login {
+        display: inline-block;
+        padding: 0.75rem 1.5rem;
+        border-radius: 4px;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    
+    .btn-home {
+        background-color: #6c757d;
+        color: white;
+    }
+    
+    .btn-login {
+        background-color: #007bff;
+        color: white;
+    }
+    
+    .btn-home:hover {
+        background-color: #5a6268;
+    }
+    
+    .btn-login:hover {
+        background-color: #0069d9;
+    }
+</style>

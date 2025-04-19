@@ -17,12 +17,22 @@
                 <li><a asp-controller="Product" asp-action="Index">Products</a></li>
                 <li><a asp-controller="Home" asp-action="About">About</a></li>
                 <li><a asp-controller="Repair" asp-action="Index">Repair Services</a></li>
-                <!-- <li><a asp-controller="Home" asp-action="Contact">Contact</a></li> -->
+                <li><a asp-controller="Home" asp-action="Contact">Contact</a></li>
             </ul>
         </nav>
         <div class="user-actions">
-            <a asp-controller="Account" asp-action="Login">Login</a>
-            <a asp-controller="Account" asp-action="Register">Register</a>
+            @if (User.Identity.IsAuthenticated)
+            {
+                <span class="welcome-user">Welcome, @User.Identity.Name!</span>
+                <form asp-controller="Account" asp-action="Logout" method="post" class="logout-form">
+                    <button type="submit" class="btn-logout">Logout</button>
+                </form>
+            }
+            else
+            {
+                <a asp-controller="Account" asp-action="Login">Login</a>
+                <a asp-controller="Account" asp-action="Register">Register</a>
+            }
             <a asp-controller="Cart" asp-action="Index">Cart (0)</a>
         </div>
     </header>

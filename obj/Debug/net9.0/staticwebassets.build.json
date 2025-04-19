@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "yfzeEjcPmPCP0OHrXP5johnLcj1zbVx9hmoo4FFUXus=",
+  "Hash": "2WoTtW+QgkozGryPHne20oE1DinPyLVvSrpVPh2miQY=",
   "Source": "MusicalInstrumentShop",
   "BasePath": "_content/MusicalInstrumentShop",
   "Mode": "Default",
@@ -521,12 +521,12 @@
       "OriginalItemSpec": "D:\\freelance\\MusicalInstrumentShop\\wwwroot\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Identity": "D:\\freelance\\MusicalInstrumentShop\\obj\\Debug\\net9.0\\compressed\\g3jp0v8zpx-w05p37ozcj.gz",
+      "Identity": "D:\\freelance\\MusicalInstrumentShop\\obj\\Debug\\net9.0\\compressed\\g3jp0v8zpx-3ia7h3y0xo.gz",
       "SourceId": "MusicalInstrumentShop",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\freelance\\MusicalInstrumentShop\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/MusicalInstrumentShop",
-      "RelativePath": "css/site#[.{fingerprint=w05p37ozcj}]?.css.gz",
+      "RelativePath": "css/site#[.{fingerprint=3ia7h3y0xo}]?.css.gz",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -535,8 +535,8 @@
       "RelatedAsset": "D:\\freelance\\MusicalInstrumentShop\\wwwroot\\css\\site.css",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "puyihe5df2",
-      "Integrity": "8bkxmr+OEUk7evjZrzIsBU2ndx377O8QzNifBI9ofg8=",
+      "Fingerprint": "zp9r7bhc0c",
+      "Integrity": "9+ymukkWxJMfXgPuWnbhJoybvIo5trC8pX862gOyLd0=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "D:\\freelance\\MusicalInstrumentShop\\wwwroot\\css\\site.css"
@@ -1417,8 +1417,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "w05p37ozcj",
-      "Integrity": "sISNdCrmywEauOv9kc4enVddL06ArL3Q8KQieSHvPTc=",
+      "Fingerprint": "3ia7h3y0xo",
+      "Integrity": "6+1JQ9IuIvYrVRO1CUDBdbFl9feMXQhbU1gD70aaSiQ=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
@@ -3022,13 +3022,13 @@
   ],
   "Endpoints": [
     {
-      "Route": "css/site.css",
-      "AssetFile": "D:\\freelance\\MusicalInstrumentShop\\obj\\Debug\\net9.0\\compressed\\g3jp0v8zpx-w05p37ozcj.gz",
+      "Route": "css/site.3ia7h3y0xo.css",
+      "AssetFile": "D:\\freelance\\MusicalInstrumentShop\\obj\\Debug\\net9.0\\compressed\\g3jp0v8zpx-3ia7h3y0xo.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000430848772"
+          "Quality": "0.000413223140"
         }
       ],
       "ResponseHeaders": [
@@ -3038,19 +3038,19 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2320"
+          "Value": "2419"
         },
         {
           "Name": "ETag",
-          "Value": "\"8bkxmr+OEUk7evjZrzIsBU2ndx377O8QzNifBI9ofg8=\""
+          "Value": "\"9+ymukkWxJMfXgPuWnbhJoybvIo5trC8pX862gOyLd0=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 18 Apr 2025 21:16:24 GMT"
+          "Value": "Sat, 19 Apr 2025 09:23:51 GMT"
         },
         {
           "Name": "Cache-Control",
-          "Value": "no-cache"
+          "Value": "max-age=31536000, immutable"
         },
         {
           "Name": "Content-Encoding",
@@ -3066,18 +3066,26 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"sISNdCrmywEauOv9kc4enVddL06ArL3Q8KQieSHvPTc=\""
+          "Value": "W/\"6+1JQ9IuIvYrVRO1CUDBdbFl9feMXQhbU1gD70aaSiQ=\""
         }
       ],
       "EndpointProperties": [
         {
+          "Name": "fingerprint",
+          "Value": "3ia7h3y0xo"
+        },
+        {
+          "Name": "label",
+          "Value": "css/site.css"
+        },
+        {
           "Name": "integrity",
-          "Value": "sha256-sISNdCrmywEauOv9kc4enVddL06ArL3Q8KQieSHvPTc="
+          "Value": "sha256-6+1JQ9IuIvYrVRO1CUDBdbFl9feMXQhbU1gD70aaSiQ="
         }
       ]
     },
     {
-      "Route": "css/site.css",
+      "Route": "css/site.3ia7h3y0xo.css",
       "AssetFile": "D:\\freelance\\MusicalInstrumentShop\\wwwroot\\css\\site.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -3087,7 +3095,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "13777"
+          "Value": "14129"
         },
         {
           "Name": "Content-Type",
@@ -3095,121 +3103,21 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"sISNdCrmywEauOv9kc4enVddL06ArL3Q8KQieSHvPTc=\""
+          "Value": "\"6+1JQ9IuIvYrVRO1CUDBdbFl9feMXQhbU1gD70aaSiQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 18 Apr 2025 21:16:24 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-sISNdCrmywEauOv9kc4enVddL06ArL3Q8KQieSHvPTc="
-        }
-      ]
-    },
-    {
-      "Route": "css/site.css.gz",
-      "AssetFile": "D:\\freelance\\MusicalInstrumentShop\\obj\\Debug\\net9.0\\compressed\\g3jp0v8zpx-w05p37ozcj.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "2320"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"8bkxmr+OEUk7evjZrzIsBU2ndx377O8QzNifBI9ofg8=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 18 Apr 2025 21:16:24 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-8bkxmr+OEUk7evjZrzIsBU2ndx377O8QzNifBI9ofg8="
-        }
-      ]
-    },
-    {
-      "Route": "css/site.w05p37ozcj.css",
-      "AssetFile": "D:\\freelance\\MusicalInstrumentShop\\obj\\Debug\\net9.0\\compressed\\g3jp0v8zpx-w05p37ozcj.gz",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip",
-          "Quality": "0.000430848772"
-        }
-      ],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "2320"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"8bkxmr+OEUk7evjZrzIsBU2ndx377O8QzNifBI9ofg8=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 18 Apr 2025 21:16:24 GMT"
+          "Value": "Sat, 19 Apr 2025 09:23:51 GMT"
         },
         {
           "Name": "Cache-Control",
           "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "W/\"sISNdCrmywEauOv9kc4enVddL06ArL3Q8KQieSHvPTc=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "w05p37ozcj"
+          "Value": "3ia7h3y0xo"
         },
         {
           "Name": "label",
@@ -3217,13 +3125,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-sISNdCrmywEauOv9kc4enVddL06ArL3Q8KQieSHvPTc="
+          "Value": "sha256-6+1JQ9IuIvYrVRO1CUDBdbFl9feMXQhbU1gD70aaSiQ="
         }
       ]
     },
     {
-      "Route": "css/site.w05p37ozcj.css",
-      "AssetFile": "D:\\freelance\\MusicalInstrumentShop\\wwwroot\\css\\site.css",
+      "Route": "css/site.3ia7h3y0xo.css.gz",
+      "AssetFile": "D:\\freelance\\MusicalInstrumentShop\\obj\\Debug\\net9.0\\compressed\\g3jp0v8zpx-3ia7h3y0xo.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3232,7 +3140,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "13777"
+          "Value": "2419"
         },
         {
           "Name": "Content-Type",
@@ -3240,56 +3148,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"sISNdCrmywEauOv9kc4enVddL06ArL3Q8KQieSHvPTc=\""
+          "Value": "\"9+ymukkWxJMfXgPuWnbhJoybvIo5trC8pX862gOyLd0=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 18 Apr 2025 21:16:24 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "w05p37ozcj"
-        },
-        {
-          "Name": "label",
-          "Value": "css/site.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-sISNdCrmywEauOv9kc4enVddL06ArL3Q8KQieSHvPTc="
-        }
-      ]
-    },
-    {
-      "Route": "css/site.w05p37ozcj.css.gz",
-      "AssetFile": "D:\\freelance\\MusicalInstrumentShop\\obj\\Debug\\net9.0\\compressed\\g3jp0v8zpx-w05p37ozcj.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "2320"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"8bkxmr+OEUk7evjZrzIsBU2ndx377O8QzNifBI9ofg8=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 18 Apr 2025 21:16:24 GMT"
+          "Value": "Sat, 19 Apr 2025 09:23:51 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3307,7 +3170,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "w05p37ozcj"
+          "Value": "3ia7h3y0xo"
         },
         {
           "Name": "label",
@@ -3315,7 +3178,144 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-8bkxmr+OEUk7evjZrzIsBU2ndx377O8QzNifBI9ofg8="
+          "Value": "sha256-9+ymukkWxJMfXgPuWnbhJoybvIo5trC8pX862gOyLd0="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.css",
+      "AssetFile": "D:\\freelance\\MusicalInstrumentShop\\obj\\Debug\\net9.0\\compressed\\g3jp0v8zpx-3ia7h3y0xo.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000413223140"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2419"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"9+ymukkWxJMfXgPuWnbhJoybvIo5trC8pX862gOyLd0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 19 Apr 2025 09:23:51 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"6+1JQ9IuIvYrVRO1CUDBdbFl9feMXQhbU1gD70aaSiQ=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-6+1JQ9IuIvYrVRO1CUDBdbFl9feMXQhbU1gD70aaSiQ="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.css",
+      "AssetFile": "D:\\freelance\\MusicalInstrumentShop\\wwwroot\\css\\site.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "14129"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"6+1JQ9IuIvYrVRO1CUDBdbFl9feMXQhbU1gD70aaSiQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 19 Apr 2025 09:23:51 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-6+1JQ9IuIvYrVRO1CUDBdbFl9feMXQhbU1gD70aaSiQ="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.css.gz",
+      "AssetFile": "D:\\freelance\\MusicalInstrumentShop\\obj\\Debug\\net9.0\\compressed\\g3jp0v8zpx-3ia7h3y0xo.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2419"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"9+ymukkWxJMfXgPuWnbhJoybvIo5trC8pX862gOyLd0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 19 Apr 2025 09:23:51 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-9+ymukkWxJMfXgPuWnbhJoybvIo5trC8pX862gOyLd0="
         }
       ]
     },
