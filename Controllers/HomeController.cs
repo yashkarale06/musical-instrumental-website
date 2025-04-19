@@ -32,28 +32,28 @@ namespace MusicalInstrumentShop.Controllers
                     Name = "Acoustic Guitar", 
                     Description = "Premium wooden acoustic guitar", 
                     Price = 22499, 
-                    ImageUrl = "https://via.placeholder.com/800x600?text=Acoustic+Guitar" 
+                    ImageUrl = "/images/products/electric-guitar.jpg" 
                 },
                 new Product { 
                     ProductId = 4, 
                     Name = "Digital Piano", 
                     Description = "88-key weighted digital piano", 
                     Price = 41249, 
-                    ImageUrl = "https://via.placeholder.com/800x600?text=Digital+Piano" 
+                    ImageUrl = "/images/products/electric-guitar.jpg" 
                 },
                 new Product { 
                     ProductId = 7, 
                     Name = "Drum Kit", 
                     Description = "Complete 5-piece drum set", 
                     Price = 52499, 
-                    ImageUrl = "https://via.placeholder.com/800x600?text=Drum+Kit" 
+                    ImageUrl = "/images/products/electric-guitar.jpg" 
                 },
                 new Product { 
                     ProductId = 10, 
                     Name = "Alto Saxophone", 
                     Description = "Professional alto saxophone", 
                     Price = 59999, 
-                    ImageUrl = "https://via.placeholder.com/800x600?text=Alto+Saxophone" 
+                    ImageUrl = "/images/products/electric-guitar.jpg" 
                 }
             };
 
@@ -68,10 +68,6 @@ namespace MusicalInstrumentShop.Controllers
             return View();
         }
 
-        public IActionResult Contact()
-        {
-            return View();
-        }
 
         public IActionResult Privacy()
         {

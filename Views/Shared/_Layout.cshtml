@@ -17,11 +17,10 @@
                 <li><a asp-controller="Product" asp-action="Index">Products</a></li>
                 <li><a asp-controller="Home" asp-action="About">About</a></li>
                 <li><a asp-controller="Repair" asp-action="Index">Repair Services</a></li>
-                <li><a asp-controller="Home" asp-action="Contact">Contact</a></li>
             </ul>
         </nav>
         <div class="user-actions">
-            @if (User.Identity.IsAuthenticated)
+            @if (User.Identity != null && User.Identity.IsAuthenticated)
             {
                 <span class="welcome-user">Welcome, @User.Identity.Name!</span>
                 <form asp-controller="Account" asp-action="Logout" method="post" class="logout-form">
@@ -51,13 +50,12 @@
                 <h3>Quick Links</h3>
                 <ul>
                     <li><a asp-controller="Home" asp-action="About">About Us</a></li>
-                    <li><a asp-controller="Home" asp-action="Contact">Contact Us</a></li>
                     <li><a href="#">FAQ</a></li>
                     <li><a href="#">Shipping Information</a></li>
                 </ul>
             </div>
             <div class="footer-section">
-                <h3>Contact Us</h3>
+                
                 <p>123 Music Street, Melody City</p>
                 <p>Phone: (123) 456-7890</p>
                 <p>Email: info@musicalinstrumentshop.com</p>

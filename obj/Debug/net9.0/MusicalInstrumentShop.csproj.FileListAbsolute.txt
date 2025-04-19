@@ -222,5 +222,7 @@ D:\freelance\MusicalInstrumentShop\bin\Debug\net9.0\runtimes\win-arm\native\e_sq
 D:\freelance\MusicalInstrumentShop\bin\Debug\net9.0\runtimes\win-arm64\native\e_sqlite3.dll
 D:\freelance\MusicalInstrumentShop\bin\Debug\net9.0\runtimes\win-x64\native\e_sqlite3.dll
 D:\freelance\MusicalInstrumentShop\bin\Debug\net9.0\runtimes\win-x86\native\e_sqlite3.dll
-D:\freelance\MusicalInstrumentShop\obj\Debug\net9.0\compressed\g3jp0v8zpx-3ia7h3y0xo.gz
 D:\freelance\MusicalInstrumentShop\obj\Debug\net9.0\MusicalI.FF6FFA87.Up2Date
+D:\freelance\MusicalInstrumentShop\bin\Debug\net9.0\Newtonsoft.Json.dll
+D:\freelance\MusicalInstrumentShop\bin\Debug\net9.0\RazorPay Core.dll
+D:\freelance\MusicalInstrumentShop\obj\Debug\net9.0\compressed\g3jp0v8zpx-38q5rryap2.gz

@@ -1,7 +1,9 @@
+// Program.cs fixed version
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using MusicalInstrumentShop.Data;
 using MusicalInstrumentShop.Models;
+using MusicalInstrumentShop.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -34,6 +36,15 @@ builder.Services.ConfigureApplicationCookie(options =>
     options.ExpireTimeSpan = TimeSpan.FromDays(7);
 });
 
+// Configure Razorpay services
+builder.Services.AddSingleton(provider => {
+    var configuration = provider.GetRequiredService<IConfiguration>();
+    var keyId = configuration["Razorpay:KeyId"] ?? throw new InvalidOperationException("Razorpay KeyId is not configured");
+    var keySecret = configuration["Razorpay:KeySecret"] ?? throw new InvalidOperationException("Razorpay KeySecret is not configured");
+    return new MusicalInstrumentShop.Services.RazorpayService(keyId, keySecret);
+});
+
+// Build the app AFTER all services are registered
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

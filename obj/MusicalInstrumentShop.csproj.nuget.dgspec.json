@@ -67,6 +67,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[9.0.4, )"
+            },
+            "RazorPay.Core": {
+              "target": "Package",
+              "version": "[1.0.2, )"
             }
           },
           "imports": [

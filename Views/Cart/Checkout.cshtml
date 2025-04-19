@@ -1,3 +1,4 @@
+@model MusicalInstrumentShop.ViewModels.RazorpayCheckoutViewModel
 @{
     ViewData["Title"] = "Checkout";
 }
@@ -41,27 +42,27 @@
                 </div>
                 <div class="total-row grand-total">
                     <span>Total:</span>
-                    <span>₹75,723</span>
+                    <span>₹@Model.Amount.ToString("N0")</span>
                 </div>
             </div>
         </div>
         
         <div class="checkout-form">
             <h3>Shipping Information</h3>
-            <form method="post" asp-controller="Cart" asp-action="PlaceOrder">
+            <form id="shipping-form">
                 <div class="form-group">
                     <label for="FullName">Full Name</label>
-                    <input type="text" id="FullName" name="FullName" class="form-control" required value="@User.Identity.Name">
+                    <input type="text" id="FullName" name="FullName" class="form-control" required value="@(User.Identity != null ? User.Identity.Name : "")">
                 </div>
                 
                 <div class="form-group">
                     <label for="Email">Email</label>
-                    <input type="email" id="Email" name="Email" class="form-control" required value="@User.Identity.Name">
+                    <input type="email" id="Email" name="Email" class="form-control" required value="@(User.Identity != null ? User.Identity.Name : "")">
                 </div>
                 
                 <div class="form-group">
                     <label for="PhoneNumber">Phone Number</label>
-                    <input type="tel" id="PhoneNumber" name="PhoneNumber" class="form-control" required>
+                    <input type="tel" id="PhoneNumber" name="PhoneNumber" class="form-control" required value="@Model.CustomerPhone">
                 </div>
                 
                 <div class="form-group">
@@ -90,49 +91,13 @@
                 
                 <div class="payment-options">
                     <div class="payment-option">
-                        <input type="radio" id="payment-cod" name="PaymentMethod" value="CashOnDelivery" checked>
-                        <label for="payment-cod">Cash on Delivery</label>
-                    </div>
-                    
-                    <div class="payment-option">
-                        <input type="radio" id="payment-card" name="PaymentMethod" value="CreditCard">
-                        <label for="payment-card">Credit/Debit Card</label>
-                    </div>
-                    
-                    <div class="payment-option">
-                        <input type="radio" id="payment-upi" name="PaymentMethod" value="UPI">
-                        <label for="payment-upi">UPI</label>
-                    </div>
-                </div>
-                
-                <div class="card-details" style="display: none;">
-                    <div class="form-group">
-                        <label for="CardNumber">Card Number</label>
-                        <input type="text" id="CardNumber" name="CardNumber" class="form-control" placeholder="1234 5678 9012 3456">
-                    </div>
-                    
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="ExpiryDate">Expiry Date</label>
-                            <input type="text" id="ExpiryDate" name="ExpiryDate" class="form-control" placeholder="MM/YY">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="CVV">CVV</label>
-                            <input type="text" id="CVV" name="CVV" class="form-control" placeholder="123">
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="upi-details" style="display: none;">
-                    <div class="form-group">
-                        <label for="UPIId">UPI ID</label>
-                        <input type="text" id="UPIId" name="UPIId" class="form-control" placeholder="username@upi">
+                        <input type="radio" id="payment-razorpay" name="PaymentMethod" value="Razorpay" checked>
+                        <label for="payment-razorpay">Pay with Razorpay (Credit/Debit Card, UPI, etc.)</label>
                     </div>
                 </div>
                 
                 <div class="form-actions">
-                    <button type="submit" class="btn-place-order">Place Order</button>
+                    <button type="button" id="rzp-button" class="btn-place-order">Pay ₹@Model.Amount.ToString("N0")</button>
                 </div>
             </form>
         </div>
@@ -294,27 +259,78 @@
 </style>
 
 @section Scripts {
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
     <script>
-        // Toggle payment details based on selected payment method
         document.addEventListener('DOMContentLoaded', function() {
-            var paymentOptions = document.querySelectorAll('input[name="PaymentMethod"]');
-            var cardDetails = document.querySelector('.card-details');
-            var upiDetails = document.querySelector('.upi-details');
-            
-            paymentOptions.forEach(function(option) {
-                option.addEventListener('change', function() {
-                    if (this.value === 'CreditCard') {
-                        cardDetails.style.display = 'block';
-                        upiDetails.style.display = 'none';
-                    } else if (this.value === 'UPI') {
-                        cardDetails.style.display = 'none';
-                        upiDetails.style.display = 'block';
-                    } else {
-                        cardDetails.style.display = 'none';
-                        upiDetails.style.display = 'none';
+            var options = {
+                "key": "@Model.RazorpayKey",
+                "amount": "@Model.AmountInPaisa", // Amount in paisa
+                "currency": "@Model.Currency",
+                "name": "@Model.Name",
+                "description": "@Model.Description",
+                "image": "@Model.ImageLogo",
+                "order_id": "@Model.OrderId",
+                "handler": function(response) {
+                    // Create a form to submit the payment details
+                    var form = document.createElement('form');
+                    form.method = 'POST';
+                    form.action = '@Url.Action("PaymentCallback", "Cart")';
+                    
+                    // Add CSRF token
+                    var antiforgeryToken = document.querySelector('input[name="__RequestVerificationToken"]');
+                    if (antiforgeryToken) {
+                        var tokenInput = document.createElement('input');
+                        tokenInput.type = 'hidden';
+                        tokenInput.name = '__RequestVerificationToken';
+                        tokenInput.value = antiforgeryToken.value;
+                        form.appendChild(tokenInput);
                     }
-                });
-            });
+                    
+                    // Add payment details
+                    var fields = {
+                        'razorpay_payment_id': response.razorpay_payment_id,
+                        'razorpay_order_id': response.razorpay_order_id,
+                        'razorpay_signature': response.razorpay_signature
+                    };
+                    
+                    for (var field in fields) {
+                        var input = document.createElement('input');
+                        input.type = 'hidden';
+                        input.name = field;
+                        input.value = fields[field];
+                        form.appendChild(input);
+                    }
+                    
+                    // Submit the form
+                    document.body.appendChild(form);
+                    form.submit();
+                },
+                "prefill": {
+                    "name": "@Model.CustomerName",
+                    "email": "@Model.CustomerEmail",
+                    "contact": "@Model.CustomerPhone"
+                },
+                "theme": {
+                    "color": "#3399cc"
+                }
+            };
+            
+            var rzp = new Razorpay(options);
+            
+            document.getElementById('rzp-button').onclick = function(e) {
+                // Validate the form first
+                var form = document.getElementById('shipping-form');
+                if (form.checkValidity()) {
+                    rzp.open();
+                    e.preventDefault();
+                } else {
+                    // Trigger HTML5 validation
+                    form.reportValidity();
+                }
+            };
         });
     </script>
+    
+    @* Add CSRF token for the form submission *@
+    @Html.AntiForgeryToken()
 }
